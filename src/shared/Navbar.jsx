@@ -1,7 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import AuthContext from '../context/AuthContext/AuthContext';
 
 const Navbar = () => {
+    const { user, signOutUser } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                toast.success("Successful sign out")
+            })
+            .catch(error => {
+                toast.warning("sign out Error")
+            })
+    }
 
     return (
         <div className="navbar bg-base-100 p-0">
@@ -57,7 +70,16 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Log-in</a>
+                {
+                    user ? <div className="flex items-center gap-3">
+                        <div className="tooltip tooltip-left" data-tip={user.displayName}>
+                            <div className="w-12 h-12 rounded-full"><img src={user.photoURL} alt="" className="rounded-full w-full h-full" /></div>
+                        </div>
+                        <a onClick={handleSignOut} className="btn bg-red-500 text-white hover:bg-red-900 border-none">Logout</a>
+                    </div>
+                        : <><NavLink to="/login" className="btn bg-blue-600 border-none hover:bg-teal-600 text-white mr-2">Log-in</NavLink>
+                          </>
+                }
             </div>
         </div>
 
