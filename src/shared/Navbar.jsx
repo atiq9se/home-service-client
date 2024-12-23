@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../context/AuthContext/AuthContext';
+import logo_icon from '../assets/logo_icon.png'
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext)
@@ -50,7 +51,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <Link to='/' className="">Home services</Link>
+                <Link to='/' className="flex items-center"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold'>HOME SERVICE</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

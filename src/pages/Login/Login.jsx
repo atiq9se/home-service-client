@@ -25,7 +25,7 @@ const Login = () => {
                 toast.warning("Email or Password is incorrect")
             })
     }
-    
+
     const handleGoogleSignIn= ()=> {
         signInWithGoogle()
             .then((result)=>{
@@ -38,7 +38,7 @@ const Login = () => {
     }
 
     return (
-        <div className="hero bg-base-200 min-h-screen py-6">
+        <div className="hero min-h-screen py-6">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <div className='lg:w-96 w-60'>
