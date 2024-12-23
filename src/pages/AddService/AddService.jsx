@@ -41,7 +41,7 @@ const AddService = () => {
     }
     return (
         <div className="hero bg-slate-800 px-5">
-            <div className="card bg-slate-700 md:w-96 w-full shadow-2xl my-8">
+            <div className="card bg-slate-700 md:w-96 w-full shadow-2xl my-8 z-10">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                   <h3 className="text-center text-blue-600 font-bold md:text-4xl text-xl">ADD SERVICE</h3>
                   <div className="form-control">

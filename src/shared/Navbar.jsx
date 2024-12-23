@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../context/AuthContext/AuthContext';
 import logo_icon from '../assets/logo_icon.png'
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext)
@@ -37,12 +38,12 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow z-999">
                         <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/'>Services</Link></li>
+                        <li><Link to='/allServices'>Services</Link></li>
                         <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
+                            <a>Dashboard</a>
+                            <ul className="p-2 z-40">
                                 <li><Link to='/addService'>Add Service</Link></li>
                                 <li><Link to='/'>Manage Service</Link></li>
                                 <li><Link to='/'>Booked-Services</Link></li>
@@ -56,11 +57,11 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/'>Services</Link></li>
+                    <li><Link to='/allServices'>Services</Link></li>
                     <li>
                         <details>
                             <summary>Dashboard</summary>
-                            <ul className="p-2 w-40">
+                            <ul className="p-2 w-40 z-40">
                                 <li><Link to='/addService'>Add Service</Link></li>
                                 <li><Link to='/'>Manage Service</Link></li>
                                 <li><Link to='/'>Booked-Services</Link></li>
