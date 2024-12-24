@@ -21,24 +21,25 @@ const AddBooking = () => {
         const taking_date = form.taking_date.value;
         const special_instruction = form.special_instruction.value;
         const price = form.price.value;
-        const addBooking = {service_id, service_name, service_photo, provider_email, provider_name, user_email,user_name,taking_date, special_instruction, price }
+        const service_status = form.service_status.value;
+        const addBooking = {service_id, service_name, service_photo, provider_email, provider_name, user_email,user_name,taking_date, special_instruction, price,service_status }
         console.log(addBooking)
 
-        // fetch('http://localhost:5000/services', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(addBooking)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         Swal.fire({
-        //             title: "Service adding Successfully",
-        //             icon: "success"
-        //         });
+        fetch('http://localhost:5000/service-booking', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addBooking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                Swal.fire({
+                    title: "Service adding Successfully",
+                    icon: "success"
+                });
 
-        //     })
+            })
         // navigate('/allmovies')
 
     }
@@ -108,6 +109,11 @@ const AddBooking = () => {
                         </label>
                         <input type="text" name="price" value={price} placeholder="Price" className="input input-bordered text-blue-800" required />
                     </div>
+                    <select name="service_status"  className="select select-bordered w-full max-w-xs hidden">
+                        <option selected value="pending">Pending</option>
+                        <option value="">Working</option>
+                        <option value="">Completed</option>
+                    </select>
                     <div className="mt-5 text-center">
                         <input className="btn bg-red-400 border-none text-white px-20 text-center hover:bg-cyan-600" type="submit" value="Purchase" />
                     </div>
