@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bannerText{
+    background: rgba(0, 0, 0, .6);
+}
+.lightDarkBtn{
+    position: fixed;
+    top:50%;
+    left:0;
+    color:rgb(24, 2, 2);
+    background-color: #333;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color:bisque;
+    z-index: 9999;
+}
+body.light {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  body.dark {
+    background-color: rgb(15, 23, 42);
+    color: #fff;
+  }

@@ -48,7 +48,7 @@ const Register = () => {
 
 
     return (
-        <div className="hero bg-base-200 min-h-screen py-6">
+        <div className="hero min-h-screen py-6">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <div className='lg:w-96 w-60'>
@@ -57,7 +57,7 @@ const Register = () => {
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form className="card-body" onSubmit={handleRegister}>
-                        <h1 className="lg:text-4xl text-xl font-bold text-center">Register now!</h1>
+                        <h1 className="lg:text-4xl text-xl font-bold text-center text-black">Register now!</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>

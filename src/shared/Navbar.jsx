@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 p-0">
+        <div className="navbar p-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,15 +39,15 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow z-999">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/allServices'>Services</Link></li>
+                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/services'>Services</NavLink></li>
                         <li>
                             <a>Dashboard</a>
                             <ul className="p-2 z-40">
-                                <li><Link to='/addService'>Add Service</Link></li>
-                                <li><Link to='/'>Manage Service</Link></li>
-                                <li><Link to='/'>Booked-Services</Link></li>
-                                <li><Link to='/'>Service-To-Do</Link></li>
+                                <li><NavLink to='/addService'>Add Service</NavLink></li>
+                                <li><NavLink to='/'>Manage Service</NavLink></li>
+                                <li><NavLink to='/'>Booked-Services</NavLink></li>
+                                <li><NavLink to='/'>Service-To-Do</NavLink></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,16 +56,16 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/allServices'>Services</Link></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/services'>Services</NavLink></li>
                     <li>
                         <details>
                             <summary>Dashboard</summary>
                             <ul className="p-2 w-40 z-40">
-                                <li><Link to='/addService'>Add Service</Link></li>
-                                <li><Link to='/'>Manage Service</Link></li>
-                                <li><Link to='/'>Booked-Services</Link></li>
-                                <li><Link to='/'>Service-To-Do</Link></li>
+                                <li><NavLink to='/addService'>Add Service</NavLink></li>
+                                <li><NavLink to='/'>Manage Service</NavLink></li>
+                                <li><NavLink to='/'>Booked-Services</NavLink></li>
+                                <li><NavLink to='/'>Service-To-Do</NavLink></li>
                             </ul>
                         </details>
                     </li>

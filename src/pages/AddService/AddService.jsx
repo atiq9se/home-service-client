@@ -18,7 +18,7 @@ const AddService = () => {
         const provider_name = user.displayName;
         const provider_email = user.email;
         const provider_image = user.photoURL;
-        const newService = {service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image,}
+        const newService = {service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image}
         console.log(newService)
 
         fetch('http://localhost:5000/services',{
@@ -40,13 +40,13 @@ const AddService = () => {
         
     }
     return (
-        <div className="hero bg-slate-800 px-5">
-            <div className="card bg-slate-700 md:w-96 w-full shadow-2xl my-8 z-10">
+        <div className="hero px-5">
+            <div className="card md:w-96 w-full shadow-2xl my-8 z-10">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                  <h3 className="text-center text-blue-600 font-bold md:text-4xl text-xl">ADD SERVICE</h3>
+                  <h3 className="text-center text-cyan-600 font-bold md:text-3xl text-xl">ADD SERVICE</h3>
                   <div className="form-control">
                         <label className="label">
-                        <span className="label-text text-white">Image URL of the Service</span>
+                        <span className="label-text text-cyan-500">Image URL of the Service</span>
                         </label>
                         <input type="text" {...register("service_photo",
                             {required:true, 
@@ -58,34 +58,34 @@ const AddService = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                        <span className="label-text text-white">Service Name</span>
+                        <span className="label-text text-cyan-500">Service Name</span>
                         </label>
                         <input type="text" {...register('service_name', {required:true})} placeholder="Service Name" className="input input-bordered text-blue-800" required />
                         {errors.service_name?.type==='required' && <p className="text-red-600">Service name is required</p>}
                     </div>
                     <div className="form-control">
                         <label className="label">
-                        <span className="label-text text-white">Price</span>
+                        <span className="label-text text-cyan-500">Price</span>
                         </label>
                         <input type="text" {...register('price', {required:true})} placeholder="Price" className="input input-bordered text-blue-800" required />
                         {errors.price?.type==='required' && <p className="text-red-600">Price is required</p>}
                     </div>
                     <div className="form-control">
                         <label className="label">
-                        <span className="label-text text-white">Service Area</span>
+                        <span className="label-text text-cyan-500">Service Area</span>
                         </label>
                         <input type="text" {...register('service_area', {required:true})} placeholder="Service Area" className="input input-bordered text-blue-800" required />
                         {errors.service_area?.type==='required' && <p className="text-red-600">Service area is required</p>}
                     </div>
                     <div className="form-control">
                         <label className="label">
-                        <span className="label-text text-white">Description</span>
+                        <span className="label-text text-cyan-500">Description</span>
                         </label>
                         <textarea {...register('description', {required:true})} className="textarea textarea-bordered" placeholder="Description" required></textarea>
                         {errors.description?.type==='required' && <p className="text-red-600">Description is required</p>}
                     </div>
                     <div className="mt-5 text-center">
-                        <input className="btn bg-blue-600 border-none text-white px-20 text-center hover:bg-teal-600 w-80" type="submit"  value="Add Movie"/>
+                        <input className="btn bg-red-400 border-none text-white px-20 text-center hover:bg-cyan-600" type="submit"  value="Add Movie"/>
                     </div>
                 </form>
             </div>
