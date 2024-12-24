@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllServices from "../pages/AllServices/AllServices";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import AddBooking from "../pages/AddBooking/AddBooking";
+import BookedServices from "../pages/BookedServices/BookedServices";
 
   const router = createBrowserRouter([
     {
@@ -51,6 +52,11 @@ import AddBooking from "../pages/AddBooking/AddBooking";
           path:'/addBooking/:id',
           loader:({params})=>fetch(`http://localhost:5000/addBooking/${params.id}`),
           element:<AddBooking></AddBooking>,
+          errorElement:<ErrorPage></ErrorPage>
+        },
+        {
+          path:'/bookedServices',
+          element:<BookedServices></BookedServices>,
           errorElement:<ErrorPage></ErrorPage>
         },
 

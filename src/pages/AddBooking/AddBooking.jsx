@@ -25,7 +25,7 @@ const AddBooking = () => {
         const addBooking = {service_id, service_name, service_photo, provider_email, provider_name, user_email,user_name,taking_date, special_instruction, price,service_status }
         console.log(addBooking)
 
-        fetch('http://localhost:5000/service-booking', {
+        fetch('http://localhost:5000/allBooked-services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
