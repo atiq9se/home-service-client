@@ -5,7 +5,40 @@ import Swal from "sweetalert2";
 const ManageServiceCard = ({service}) => {
     const {_id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image} = service
 
+    const handleDelete = _id=>{
+        Swal.fire({
+        title: "Are you sure?",
+        text: "You delete this movie!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+        if (result.isConfirmed) {
+           
+            fetch(`http://localhost:5000/services/${_id}`,{
+                method:'DELETE'
+            })
+            .then(res=>res.json())
 
+            .then(data=>{
+                if(data.deletedCount > 0){
+                    Swal.fire(
+                        "Deleted!",
+                        "Your movie has been deleted.",
+                        "success"
+                    );
+
+                    // const remaining = movies.filter(mov=> mov._id !==_id)
+                    // setMovies (remaining)
+                }
+                
+            })
+            // navigate('/services')
+        }
+        });
+    }
 
     return (
         <div className="card bg-base-100 shadow-xl">
