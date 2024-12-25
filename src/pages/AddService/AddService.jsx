@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from 'react';
 import AuthContext from "../../context/AuthContext/AuthContext";
 import Swal from "sweetalert2";
+import PageTitle from "../PageTitle/PageTitle";
 
 
 const AddService = () => {
@@ -40,6 +41,7 @@ const AddService = () => {
         
     }
     return (
+        <> <PageTitle title="Add Services"></PageTitle>
         <div className="hero px-5">
             <div className="card md:w-96 w-full shadow-2xl my-8 z-10">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -85,11 +87,12 @@ const AddService = () => {
                         {errors.description?.type==='required' && <p className="text-red-600">Description is required</p>}
                     </div>
                     <div className="mt-5 text-center">
-                        <input className="btn bg-red-400 border-none text-white px-20 text-center hover:bg-cyan-600" type="submit"  value="Add Movie"/>
+                        <input className="btn bg-red-400 border-none text-white px-20 text-center hover:bg-cyan-600" type="submit"  value="Add Service"/>
                     </div>
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

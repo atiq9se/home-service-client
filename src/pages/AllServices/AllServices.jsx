@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
 import { useState } from "react";
+import PageTitle from "../PageTitle/PageTitle";
 
 
 const AllServices = () => {
@@ -10,6 +11,7 @@ const AllServices = () => {
 
     return (
         <div>
+             <PageTitle title="Service pages"></PageTitle>
             {
                 services.map(service=><ServiceCard key={service._id} service={service}></ServiceCard>)
             }
