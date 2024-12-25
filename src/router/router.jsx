@@ -10,6 +10,7 @@ import AllServices from "../pages/AllServices/AllServices";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import AddBooking from "../pages/AddBooking/AddBooking";
 import BookedServices from "../pages/BookedServices/BookedServices";
+import ManageServices from "../pages/ManageServices/ManageServices";
 
   const router = createBrowserRouter([
     {
@@ -46,6 +47,11 @@ import BookedServices from "../pages/BookedServices/BookedServices";
           path:'/services/:id',
           loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
           element:<ServiceDetails></ServiceDetails>,
+          errorElement:<ErrorPage></ErrorPage>
+        },
+        {
+          path:'/manageServices',
+          element:<ManageServices></ManageServices>,
           errorElement:<ErrorPage></ErrorPage>
         },
         {

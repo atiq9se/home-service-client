@@ -45,7 +45,7 @@ const Navbar = () => {
                             <a>Dashboard</a>
                             <ul className="p-2 z-40">
                                 <li><NavLink to='/addService'>Add Service</NavLink></li>
-                                <li><NavLink to='/'>Manage Service</NavLink></li>
+                                <li><NavLink to='/manageServices'>Manage Service</NavLink></li>
                                 <li><NavLink to='/bookedServices'>Booked-Services</NavLink></li>
                                 <li><NavLink to='/'>Service-To-Do</NavLink></li>
                             </ul>
@@ -63,7 +63,7 @@ const Navbar = () => {
                             <summary>Dashboard</summary>
                             <ul className="p-2 w-40 z-40">
                                 <li><NavLink to='/addService'>Add Service</NavLink></li>
-                                <li><NavLink to='/'>Manage Service</NavLink></li>
+                                <li><NavLink to='/manageServices'>Manage Service</NavLink></li>
                                 <li><NavLink to='/bookedServices'>Booked-Services</NavLink></li>
                                 <li><NavLink to='/'>Service-To-Do</NavLink></li>
                             </ul>
