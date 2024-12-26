@@ -3,16 +3,20 @@ import AuthContext from "../../context/AuthContext/AuthContext";
 import BookedServicesCard from "./BookedServicesCard";
 import PageTitle from "../PageTitle/PageTitle";
 
+
 const BookedServices = () => {
     const {user} = useContext(AuthContext)
     const [services, setServices] = useState([])
-    console.log(services)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booked-services?email=${user.email}`)
+
+        fetch(`https://y-blond-theta.vercel.app/booked-services?email=${user.email}`)
             .then(res => res.json())
             .then(data => setServices(data))
+
+
     }, [user.email])
+
     return (
         <div className="min-h-screen">
             <PageTitle title="Booked Services"></PageTitle>

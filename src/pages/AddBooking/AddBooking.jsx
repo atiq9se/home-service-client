@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import AuthContext from "../../context/AuthContext/AuthContext";
 import Swal from "sweetalert2"
+import PageTitle from "../PageTitle/PageTitle";
 
 const AddBooking = () => {
     const { _id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image } = useLoaderData();
@@ -25,7 +26,7 @@ const AddBooking = () => {
         const addBooking = { service_id, service_name, service_photo, provider_email, provider_name, user_email, user_name, taking_date, special_instruction, price, service_status }
         console.log(addBooking)
 
-        fetch('http://localhost:5000/allBooked-services', {
+        fetch('https://y-blond-theta.vercel.app/allBooked-services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,6 +45,9 @@ const AddBooking = () => {
 
     }
     return (
+        <>
+        <PageTitle title="Add Booking page"></PageTitle>
+
         <div className="hero px-5">
             <div className="card w-full shadow-2xl my-8 z-10">
                 <form onSubmit={handleAddBooking} className="card-body">
@@ -121,6 +125,7 @@ const AddBooking = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

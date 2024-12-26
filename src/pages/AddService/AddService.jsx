@@ -22,9 +22,8 @@ const AddService = () => {
         const provider_email = user.email;
         const provider_image = user.photoURL;
         const newService = { service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image }
-        console.log(newService)
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://y-blond-theta.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +42,7 @@ const AddService = () => {
 
     }
     return (
-        <> <PageTitle title="Add Services"></PageTitle>
+        <> <PageTitle title="Add Services page"></PageTitle>
             <div className="hero px-5">
                 <div className="card w-full shadow-2xl my-8 z-10">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

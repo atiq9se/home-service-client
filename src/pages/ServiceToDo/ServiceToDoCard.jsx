@@ -3,15 +3,13 @@ import Swal from "sweetalert2";
 
 const ServiceToDoCard = ({ service }) => {
     const { _id, service_photo, service_name, price, service_area, taking_date, service_status, special_instruction, user_name, user_email } = service
-    console.log(service)
 
     const handleStatusUpdate = (e, id) => {
-        console.log(e.target.value, id);
         const data = {
             service_status: e.target.value
         }
 
-        fetch(`http://localhost:5000/booked-services/${id}`, {
+        fetch(`https://y-blond-theta.vercel.app/booked-services/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -52,7 +50,7 @@ const ServiceToDoCard = ({ service }) => {
             </div>
             <div className="flex flex-col gap-4 justify-center items-center">
 
-                <select onChange={(e) => handleStatusUpdate(e, _id)} defaultValue={service_status} className="select select-bordered w-full max-w-xs">
+                <select onChange={(e) => handleStatusUpdate(e, _id)} defaultValue={service_status} className="select select-bordered w-full max-w-xs text-cyan-600">
                     <option>Pending</option>
                     <option>Working</option>
                     <option>Completed</option>

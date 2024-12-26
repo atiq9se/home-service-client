@@ -18,7 +18,7 @@ const ManageServiceCard = ({service, services, setServices}) => {
         }).then((result) => {
         if (result.isConfirmed) {
            
-            fetch(`http://localhost:5000/services/${_id}`,{
+            fetch(`https://y-blond-theta.vercel.app/services/${_id}`,{
                 method:'DELETE'
             })
             .then(res=>res.json())

@@ -21,7 +21,7 @@ import ServiceToDo from "../pages/ServiceToDo/ServiceToDo";
       children:[
         {
             path: "/",
-            loader:()=>fetch('http://localhost:5000/popularServices'),
+            loader:()=>fetch('https://y-blond-theta.vercel.app/popularServices'),
             element: <Home></Home>,
             errorElement: <ErrorPage></ErrorPage>
         },
@@ -46,14 +46,14 @@ import ServiceToDo from "../pages/ServiceToDo/ServiceToDo";
 
         {
           path: "/services",
-          loader:()=>fetch('http://localhost:5000/services'),
+          loader:()=>fetch('https://y-blond-theta.vercel.app/services'),
           element: <AllServices></AllServices>,
           errorElement: <ErrorPage></ErrorPage>
         },
 
         {
           path:'/services/:id',
-          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+          loader:({params})=>fetch(`https://y-blond-theta.vercel.app/services/${params.id}`),
           element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
           errorElement:<ErrorPage></ErrorPage>
         },
@@ -67,13 +67,13 @@ import ServiceToDo from "../pages/ServiceToDo/ServiceToDo";
         {
           path:'updateServices/:id',
           element:<PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+          loader:({params})=>fetch(`https://y-blond-theta.vercel.app/services/${params.id}`),
           errorElement:<ErrorPage></ErrorPage>
         },
 
         {
           path:'/addBooking/:id',
-          loader:({params})=>fetch(`http://localhost:5000/addBooking/${params.id}`),
+          loader:({params})=>fetch(`https://y-blond-theta.vercel.app/addBooking/${params.id}`),
           element:<PrivateRoute><AddBooking></AddBooking></PrivateRoute>,
           errorElement:<ErrorPage></ErrorPage>
         },

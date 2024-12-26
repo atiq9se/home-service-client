@@ -1,9 +1,11 @@
 import { Link, useLoaderData } from "react-router-dom";
+import PageTitle from "../PageTitle/PageTitle";
 
 const ServiceDetails = () => {
     const { _id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image } = useLoaderData();
     return (
         <div>
+            <PageTitle title="Service details page"></PageTitle>
             <div className="flex flex-col gap-4 justify-center items-center mt-8">
                 <div className="card shadow-xl p-4">
                     <img src={provider_image} alt="" className="w-32 rounded mx-auto" />

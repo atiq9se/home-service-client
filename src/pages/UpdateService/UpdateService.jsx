@@ -18,9 +18,8 @@ const UpdateService = () => {
         const service_area = data.service_area;
         const description = data.description;
         const updateService = { service_photo, service_name, price, service_area, description }
-        console.log(updateService)
 
-        fetch(`http://localhost:5000/services/${_id}`, {
+        fetch(`https://y-blond-theta.vercel.app/services/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +41,7 @@ const UpdateService = () => {
 
     return (
         <>
-            <PageTitle title="Update Services"></PageTitle>
+            <PageTitle title="Update Services page"></PageTitle>
             <div className="hero px-5">
                 <div className="card w-full shadow-2xl my-8 z-10">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

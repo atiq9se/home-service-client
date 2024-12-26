@@ -7,12 +7,13 @@ import AuthContext from '../../context/AuthContext/AuthContext';
 import { toast } from 'react-toastify';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../firebase/firebase.init';
+import PageTitle from '../PageTitle/PageTitle';
 
 const Register = () => {
 
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
-    const {createUser} = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -48,52 +49,56 @@ const Register = () => {
 
 
     return (
-        <div className="hero min-h-screen py-6">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <div className='lg:w-96 w-60'>
-                        <Lottie animationData={registrationLottieData}></Lottie>
+        <>
+            <PageTitle title="Register page"></PageTitle>
+
+            <div className="hero min-h-screen py-6">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left">
+                        <div className='lg:w-96 w-60'>
+                            <Lottie animationData={registrationLottieData}></Lottie>
+                        </div>
+                    </div>
+                    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form className="card-body" onSubmit={handleRegister}>
+                            <h1 className="lg:text-4xl text-xl font-bold text-center text-black">Register now!</h1>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" name="name" placeholder="Name" className="input input-bordered text-blue-800" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input type="email" name="email" placeholder="Email" className="input input-bordered text-blue-800" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered text-blue-800" required />
+                            </div>
+                            <div className="form-control relative">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered text-blue-800" required />
+                                <div onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-2 top-12'>
+                                    {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                                </div>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn bg-teal-900 hover:bg-teal-600 text-white">Register</button>
+                            </div>
+                            <p className='text-black'>You have any account please <Link to='/login' className="text-teal-600">Login</Link></p>
+                        </form>
+
                     </div>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form className="card-body" onSubmit={handleRegister}>
-                        <h1 className="lg:text-4xl text-xl font-bold text-center text-black">Register now!</h1>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <input type="text" name="name" placeholder="Name" className="input input-bordered text-blue-800" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="email" name="email" placeholder="Email" className="input input-bordered text-blue-800" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Photo URL</span>
-                            </label>
-                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered text-blue-800" required />
-                        </div>
-                        <div className="form-control relative">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered text-blue-800" required />
-                            <div onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-2 top-12'>
-                                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
-                            </div>
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn bg-teal-900 hover:bg-teal-600 text-white">Register</button>
-                        </div>
-                        <p>You have any account please <Link to='/login' className="text-teal-600">Login</Link></p>
-                    </form>
-
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import AuthContext from "./AuthContext";
 import auth from "../../firebase/firebase.init";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import axios from "axios";
+
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -32,12 +34,28 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
         const unSubscribe =  onAuthStateChanged(auth, currentUser=>{
             setUser(currentUser);
-            setLoading(false);
+
+            if(currentUser?.email){
+                const user = {email: currentUser.email}
+
+                axios.post('https://y-blond-theta.vercel.app/jwt', user, {withCredentials:true})
+                .then(res=>{
+                    setLoading(false);
+                })
+            }
+            else{
+                axios.post('https://y-blond-theta.vercel.app/logout', {}, {withCredentials:true})
+                .then(res => {  
+                        setLoading(false);
+                    })
+            }
+
+
+            
         })
         return ()=>{
             unSubscribe();
         }
-
     }, [])
 
     const authInfo={
