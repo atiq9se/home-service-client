@@ -20,8 +20,8 @@ const Footer = () => {
                     </div>
                     <div className='flex flex-col items-center gap-4'>
                         <h3 class="font-bold pb-3 md:mt-0 mt-5 text-cyan-700 text-2xl ">Social Media Link</h3>
-                        <Link to='/register' className="block text-cyan-500 text-lg hover:text-red-700"><FaFacebookF /></Link>
-                        <Link to='/login' className="block text-cyan-500 text-lg hover:text-red-700"><FaLinkedinIn /></Link>
+                        <Link to='https://www.facebook.com/' target='_blank' className="block text-cyan-500 text-lg hover:text-red-700"><FaFacebookF /></Link>
+                        <Link to='https://bd.linkedin.com/' target='_blank' className="block text-cyan-500 text-lg hover:text-red-700"><FaLinkedinIn /></Link>
                     </div>
                     <div class="text-center text-lg" data-aos="fade-up">
                         <h3 class="font-bold pb-3 md:mt-0 mt-5 text-cyan-700 text-2xl">Contact us</h3>
