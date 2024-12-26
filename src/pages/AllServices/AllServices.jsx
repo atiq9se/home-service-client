@@ -22,7 +22,7 @@ const AllServices = () => {
     return (
         <div>
              <PageTitle title="Service pages"></PageTitle>
-             <label className="input input-bordered flex items-center gap-2 mb-4 mx-auto w-1/2">
+             <label className="input input-bordered flex items-center gap-2 mb-4 mt-10 mx-auto w-1/2">
                 <input type="text" onChange={(e)=>setSearch(e.target.value)} className="grow text-blue-800" placeholder="Search" />
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

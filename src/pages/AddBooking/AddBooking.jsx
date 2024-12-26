@@ -1,11 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import AuthContext from "../../context/AuthContext/AuthContext";
 import Swal from "sweetalert2"
 
 const AddBooking = () => {
     const { _id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image } = useLoaderData();
-
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext)
 
     const handleAddBooking = (e) => {
@@ -40,14 +40,14 @@ const AddBooking = () => {
                 });
 
             })
-        // navigate('/allmovies')
+        navigate('/bookedServices')
 
     }
     return (
         <div className="hero px-5">
             <div className="card w-full shadow-2xl my-8 z-10">
                 <form onSubmit={handleAddBooking} className="card-body">
-                    <h3 className="text-center text-cyan-600 font-bold md:text-3xl text-xl">Purchase SERVICE</h3>
+                    <h3 className="text-center text-cyan-600 font-bold md:text-3xl text-xl mb-4">Purchase Service</h3>
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                         <div className="form-control">
                             <label className="label">

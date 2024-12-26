@@ -2,7 +2,7 @@
 const BookedServicesCard = ({service}) => {
     const { _id, service_photo, service_name, price,taking_date, service_status, special_instruction, provider_name, provider_email } = service
     return (
-            <div className="card  shadow-xl grid md:grid-cols-3 grid-cols-1 gap-10 mb-5 overflow-hidden">
+            <div className="card  shadow-xl grid md:grid-cols-3 grid-cols-1 gap-8 mb-5 mt-8 overflow-hidden">
                 <div className="overflow-hidden w-100">
                     <figure>
                         <img className="w-100 overflow-hidden"
@@ -10,7 +10,7 @@ const BookedServicesCard = ({service}) => {
                             alt="serivce" />
                     </figure>
                 </div>
-                <div className="card-body">
+                <div className="">
                     <div>
                         <h4 className="text-2xl">{service_name}</h4>
                         <p className="flex gap-2 items-center font-bold">{price} Taka</p>

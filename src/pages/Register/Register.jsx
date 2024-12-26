@@ -62,25 +62,25 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                            <input type="text" name="name" placeholder="Name" className="input input-bordered text-blue-800" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+                            <input type="email" name="email" placeholder="Email" className="input input-bordered text-blue-800" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Photo URL</span>
                             </label>
-                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
+                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered text-blue-800" required />
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered" required />
+                            <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered text-blue-800" required />
                             <div onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-2 top-12'>
                                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                             </div>

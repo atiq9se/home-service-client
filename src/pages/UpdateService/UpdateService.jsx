@@ -37,16 +37,17 @@ const UpdateService = () => {
                     })
                 }
             })
-        // navigate('/services')
+        navigate('/manageServices')
     }
 
     return (
         <>
             <PageTitle title="Update Services"></PageTitle>
             <div className="hero px-5">
-                <div className="card md:w-96 w-full shadow-2xl my-8 z-10">
+                <div className="card w-full shadow-2xl my-8 z-10">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                        <h3 className="text-center text-cyan-600 font-bold md:text-3xl text-xl">Update SERVICE</h3>
+                        <h3 className="text-center text-cyan-600 font-bold md:text-3xl text-xl mb-4">Update SERVICE</h3>
+                        <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-cyan-500">Image URL of the Service</span>
@@ -85,8 +86,9 @@ const UpdateService = () => {
                             <label className="label">
                                 <span className="label-text text-cyan-500">Description</span>
                             </label>
-                            <textarea {...register('description', { required: true })} defaultValue={description} className="textarea textarea-bordered" placeholder="Description" required></textarea>
+                            <textarea {...register('description', { required: true })} defaultValue={description} className="textarea textarea-bordered text-blue-800" placeholder="Description" required></textarea>
                             {errors.description?.type === 'required' && <p className="text-red-600">Description is required</p>}
+                        </div>
                         </div>
                         <div className="mt-5 text-center">
                             <input className="btn bg-red-400 border-none text-white px-20 text-center hover:bg-cyan-600" type="submit" value="Update Service" />
