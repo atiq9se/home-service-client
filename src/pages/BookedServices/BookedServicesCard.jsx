@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({ service }) => {
-    const { _id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image } = service
+
+const BookedServicesCard = ({service}) => {
+    const { _id, service_photo, service_name, price,taking_date, service_status, special_instruction, provider_name, provider_email } = service
     return (
-        <div>
             <div className="card  shadow-xl grid md:grid-cols-3 grid-cols-1 gap-10 mb-5 overflow-hidden">
                 <div className="overflow-hidden w-100">
                     <figure>
@@ -18,17 +18,16 @@ const ServiceCard = ({ service }) => {
                         <p className="flex gap-2 items-center font-bold">{price} Taka</p>
                     </div>
                     <div className="">
-                        <p className="">Service Area: {service_area}</p>
-                        <p className="">{description}</p>
+                        <p className="">Service Date: {taking_date}</p>
+                        <p className="">{special_instruction}</p>
                     </div>
-                    <div className="flex gap-4 items-center mt-4"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>
+                    <div className="mt-4"><p>Provider Name: {provider_name}</p><p>Provider Email: {provider_email}</p></div>
                 </div>
-                <div className="card-actions justify-center items-center">
-                    <Link to={`/services/${_id}`}><button className="btn bg-cyan-600 border-none text-white px-20 text-center hover:bg-teal-600">View Details</button></Link>
+                <div className="flex justify-center items-center">
+                    <div className="btn bg-cyan-600 border-none text-white px-20 text-center hover:bg-teal-600">Pending</div>
                 </div>
             </div>
-        </div>
     );
 };
 
-export default ServiceCard;
+export default BookedServicesCard;

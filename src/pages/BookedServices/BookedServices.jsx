@@ -1,9 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/AuthContext/AuthContext";
+import BookedServicesCard from "./BookedServicesCard";
+import PageTitle from "../PageTitle/PageTitle";
 
 const BookedServices = () => {
     const {user} = useContext(AuthContext)
     const [services, setServices] = useState([])
+    console.log(services)
 
     useEffect(() => {
         fetch(`http://localhost:5000/booked-services?email=${user.email}`)
@@ -12,9 +15,9 @@ const BookedServices = () => {
     }, [user.email])
     return (
         <div>
-            {services.length}
+            <PageTitle title="Booked Services"></PageTitle>
             {
-                services.map(service=><p>{service.service_name}{service.price}</p>)
+                services.map(service=><BookedServicesCard key={service._id} service={service}></BookedServicesCard>)
             }
         </div>
     );

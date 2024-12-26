@@ -47,7 +47,7 @@ const Navbar = () => {
                                 <li><NavLink to='/addService'>Add Service</NavLink></li>
                                 <li><NavLink to='/manageServices'>Manage Service</NavLink></li>
                                 <li><NavLink to='/bookedServices'>Booked-Services</NavLink></li>
-                                <li><NavLink to='/'>Service-To-Do</NavLink></li>
+                                <li><NavLink to='/serviceTodo'>Service-To-Do</NavLink></li>
                             </ul>
                         </li>
                     </ul>
@@ -65,7 +65,7 @@ const Navbar = () => {
                                 <li><NavLink to='/addService'>Add Service</NavLink></li>
                                 <li><NavLink to='/manageServices'>Manage Service</NavLink></li>
                                 <li><NavLink to='/bookedServices'>Booked-Services</NavLink></li>
-                                <li><NavLink to='/'>Service-To-Do</NavLink></li>
+                                <li><NavLink to='/serviceTodo'>Service-To-Do</NavLink></li>
                             </ul>
                         </details>
                     </li>
