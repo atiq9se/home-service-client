@@ -20,6 +20,7 @@ import UpdateService from "../pages/UpdateService/UpdateService";
       children:[
         {
             path: "/",
+            loader:()=>fetch('http://localhost:5000/popularServices'),
             element: <Home></Home>,
             errorElement: <ErrorPage></ErrorPage>
         },
