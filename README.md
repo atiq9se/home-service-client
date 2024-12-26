@@ -1,8 +1,11 @@
-# React + Vite
+Assignment category- 02
+Website name: Home Services
+Website live link: https://b10-a11-client.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a service-sharing web application where users can perform various actions such as adding, updating, and deleting their own services, browsing services shared by others, booking services, and managing the statuses of booked services.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+.All device responsive website,
+.React base website,
+.Google and email, password Sign-up/login feature inclued 
+.Any login person add service, manage services, update and deleted
+.Any login person booking or purchase any home services
