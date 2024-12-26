@@ -1,4 +1,6 @@
+
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const ServiceCard = ({ service }) => {
     const { _id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image } = service
@@ -7,7 +9,11 @@ const ServiceCard = ({ service }) => {
             <div className="card  shadow-xl grid md:grid-cols-3 grid-cols-1 gap-10 mb-5 overflow-hidden">
                 <div className="overflow-hidden w-100">
                     <figure>
-                        <img className="w-100 overflow-hidden"
+                        <motion.img
+                            animate={{
+                                scale: 1.2,
+                                transition: { duration: 2 }
+                            }} className="w-100 overflow-hidden"
                             src={service_photo}
                             alt="serivce" />
                     </figure>

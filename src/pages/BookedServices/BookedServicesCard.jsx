@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 
 const BookedServicesCard = ({service}) => {
     const { _id, service_photo, service_name, price,taking_date, service_status, special_instruction, provider_name, provider_email } = service

@@ -13,7 +13,6 @@ const ServiceToDo = () => {
     }, [user.email])
     return (
         <div>
-            {services.length}
             {
                 services.map(service=><ServiceToDoCard key={service._id} service={service}></ServiceToDoCard>)
             }
