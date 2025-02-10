@@ -7,7 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
     return (
         <>
-            <section class="lg:py-16 py-12">
+            <section class="lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4">
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
                     <div class="text-center text-lg" data-aos="fade-up">
                         <Link to='/' className="flex items-center justify-center"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold'>HOME SERVICE</span></Link>

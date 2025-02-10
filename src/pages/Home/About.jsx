@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
     return (
-        <div className="lg:px-24 md:px-12 px-6 py-12 mt-8">
+        <div className="max-w-7xl lg:mx-auto mx-4 mt-8">
             <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
                 <div>
                 <motion.h3 className='lg:text-4xl text-xl text-cyan-800 text-center font-bold mb-4' animate={{x:[100, 60, 100]}}

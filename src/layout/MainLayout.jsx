@@ -27,7 +27,7 @@ const MainLayout = () => {
 
    
     return (
-        <div className='max-w-7xl lg:mx-auto mx-4'>
+        <div className=''>
              <button className='lightDarkBtn' onClick={toggleTheme}>
                  {theme === 'light' ? 'Dark' : 'Light'} Theme
             </button>
