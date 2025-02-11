@@ -6,6 +6,7 @@ import Banner from './Banner';
 import About from './About';
 import Project from './Project';
 import { motion } from "framer-motion";
+import Teams from './Teams';
 
 const Home = () => {
     const popularServices = useLoaderData();
@@ -23,6 +24,7 @@ const Home = () => {
             <About></About>
 
             <Project></Project>
+            <Teams></Teams>
 
 
         </div>

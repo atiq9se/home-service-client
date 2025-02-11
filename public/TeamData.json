@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "designation": "Project Manager",
+      "img": "https://i.ibb.co.com/HXX5D0N/team1.jpg",
+      "phone": "+1-123-456-7890",
+      "email": "alice.johnson@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "designation": "Lead Developer",
+      "img": "https://i.ibb.co.com/sVBswnH/team2.jpg",
+      "phone": "+1-987-654-3210",
+      "email": "bob.smith@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Charlie Lee",
+      "designation": "UI/UX Designer",
+      "img": "https://i.ibb.co.com/PDn8hmX/team3.jpg",
+      "phone": "+1-555-123-4567",
+      "email": "charlie.lee@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Diana Carter",
+      "designation": "Quality Assurance Engineer",
+      "img": "https://i.ibb.co.com/CWTBntn/team4.jpg",
+      "phone": "+1-444-987-6543",
+      "email": "diana.carter@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Ethan Brown",
+      "designation": "DevOps Engineer",
+      "img": "https://i.ibb.co.com/DrDsmz1/team5.jpg",
+      "phone": "+1-333-789-0123",
+      "email": "ethan.brown@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Fiona Green",
+      "designation": "Content Writer",
+      "img": "https://i.ibb.co.com/82xsQV9/team6.jpg",
+      "phone": "+1-222-456-7890",
+      "email": "fiona.green@example.com"
+    }
+  ]

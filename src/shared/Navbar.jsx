@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='navbarBg'>
+        <div className='navbarBg fixed w-full bg-gray-400 z-50'>
             <div className="navbar max-w-7xl lg:mx-auto mx-4">
                 <div className="navbar-start">
                     <div className="dropdown z-40">
@@ -57,7 +57,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <Link to='/' className="flex items-center"><img src={logo_icon} alt="" className='w-16' /> <span className='md:text-2xl text-sm font-bold'>HOME SERVICE</span></Link>
+                    <Link to='/' className="flex items-center"><img src={logo_icon} alt="" className='w-16' /> <span className='md:text-2xl text-sm font-bold text-white'>HOME SERVICE</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
