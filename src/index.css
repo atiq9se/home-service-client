@@ -29,7 +29,9 @@ body.dark {
   background-color: rgb(15, 23, 42);
   color: #fff;
 }
-
+/* .navbarBg{
+  background-color: rgb(15, 23, 42);
+} */
 .active{
   background-color: red!important;
 }

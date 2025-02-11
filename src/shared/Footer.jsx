@@ -6,11 +6,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <>
+        <div className='bg-gray-200 lg:mt-12 mt-6'>
             <section class="lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4">
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
                     <div class="text-center text-lg" data-aos="fade-up">
-                        <Link to='/' className="flex items-center justify-center"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold'>HOME SERVICE</span></Link>
+                        <Link to='/' className="flex items-center justify-start"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold text-cyan-700'>HOME SERVICE</span></Link>
                     </div>
                     <div class="text-center text-lg" data-aos="fade-up">
                         <h3 class="font-bold pb-3 md:mt-0 mt-5 text-cyan-700 text-2xl">Important Link</h3>
@@ -31,10 +31,10 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <div className="text-center border-t border-t-blue-950">
+            <div className="text-center border-t border-t-gray-300 bg-gray-300">
                 <p className="text-cyan-500 py-2">All right reserved@ HOME SERVICE</p>
             </div>
-        </>
+        </div>
     );
 };
 

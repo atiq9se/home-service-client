@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const Project = () => {
     return (
         <div className="max-w-7xl lg:mx-auto mx-4">
-            <motion.h2 className='lg:text-4xl text-xl text-cyan-800 text-center font-bold mb-8 mt-8' animate={{x:[100, 60, 100]}}
+            <motion.h2 className='lg:text-4xl text-xl text-cyan-800 text-center font-bold mb-8 mt-12' animate={{x:[100, 60, 100]}}
                         transition={{duration:5, repeat:Infinity}}>Our Latest Projects</motion.h2>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
                 <img src={project1} alt="" className='rounded'/>

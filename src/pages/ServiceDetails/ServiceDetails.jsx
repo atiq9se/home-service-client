@@ -19,7 +19,7 @@ const ServiceDetails = () => {
                     <h4 className="text-2xl mt-4">{service_name}</h4>
                     <p className="">{description}</p>
                     <div className="flex gap-4 items-center mt-4"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>
-                    <p className="flex gap-2 items-center font-bold text-xl mt-3">Price: {price} Taka</p>
+                    <p className="flex gap-2 items-center font-bold text-xl mt-3">{price} Taka</p>
                 </div>
             </div>
 

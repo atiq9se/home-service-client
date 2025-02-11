@@ -13,7 +13,7 @@ const ManageServices = () => {
             .then(data => setServices(data))
     }, [user.email])
     return (
-        <>
+        <div className="lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4">
 
             <PageTitle title="Manage Services page"></PageTitle>
             <div className="min-h-screen">
@@ -27,7 +27,7 @@ const ManageServices = () => {
                     <p className="text-3xl text-red-800 md:py-24 py-10">No services added yet. Check out our offerings to book your first service!</p>
                 )}
             </div>
-        </>
+        </div>
     );
 };
 

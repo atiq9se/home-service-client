@@ -42,7 +42,8 @@ const AddService = () => {
 
     }
     return (
-        <> <PageTitle title="Add Services page"></PageTitle>
+        <div className="lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4"> 
+        <PageTitle title="Add Services page"></PageTitle>
             <div className="hero px-5">
                 <div className="card w-full shadow-2xl my-8 z-10">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -96,7 +97,7 @@ const AddService = () => {
                     </form>
                 </div >
             </div >
-        </>
+        </div>
     );
 };
 

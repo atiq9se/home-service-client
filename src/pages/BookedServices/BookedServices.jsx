@@ -18,7 +18,7 @@ const BookedServices = () => {
     }, [user.email])
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4">
             <PageTitle title="Booked Services"></PageTitle>
             
             {services.length > 0 ? (

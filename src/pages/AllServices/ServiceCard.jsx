@@ -6,7 +6,7 @@ const ServiceCard = ({ service }) => {
     const { _id, service_photo, service_name, price, service_area, description, provider_name, provider_email, provider_image } = service
     return (
         <div>
-            <div className="card  shadow-xl grid md:grid-cols-3 grid-cols-1 gap-6 mb-5 overflow-hidden">
+            <div className="card border border-b-gray-100 grid md:grid-cols-3 grid-cols-1 gap-6 mb-5 overflow-hidden">
                 <div className="overflow-hidden w-100">
                     <figure>
                         <motion.img
@@ -24,7 +24,7 @@ const ServiceCard = ({ service }) => {
                         <p className="flex gap-2 items-center font-bold">{price} Taka</p>
                     </div>
                     <div className="">
-                        <p className="">Service Area: {service_area}</p>
+                        <p className="font-bold font-3xl">{service_area}</p>
                         <p className="">{description}</p>
                     </div>
                     <div className="flex gap-4 items-center mt-4"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>

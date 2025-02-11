@@ -20,7 +20,7 @@ const AllServices = () => {
     },[search]);
 
     return (
-        <div>
+        <div className="lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4">
              <PageTitle title="Service pages"></PageTitle>
              <label className="input input-bordered flex items-center gap-2 mb-4 mt-10 mx-auto w-1/2">
                 <input type="text" onChange={(e)=>setSearch(e.target.value)} className="grow text-blue-800" placeholder="Search" />
