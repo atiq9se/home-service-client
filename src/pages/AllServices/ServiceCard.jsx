@@ -19,8 +19,8 @@ const ServiceCard = ({ service }) => {
                     </figure>
                 </div>
                 <div className="">
-                    <div>
-                        <h4 className="text-2xl">{service_name}</h4>
+                    <div className="mb-4">
+                        <h4 className="text-2xl font-bold">{service_name}</h4>
                         <p className="flex gap-2 items-center font-bold">{price} Taka</p>
                     </div>
                     <div className="">
