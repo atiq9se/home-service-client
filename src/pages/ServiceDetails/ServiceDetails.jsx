@@ -7,19 +7,16 @@ const ServiceDetails = () => {
         <div>
             <PageTitle title="Service details page"></PageTitle>
             <div className="flex flex-col gap-4 justify-center items-center mt-8">
-                <div className="card shadow-xl p-4">
-                    <img src={provider_image} alt="" className="w-32 rounded mx-auto" />
-                    <h3 className="text-xl text-center">{provider_name}</h3>
-                    <p className="text-center">Service Area: <span className="font-bold">{service_area}</span></p>
-                </div>
-                <div className="card shadow-xl p-6">
+              
+                <div className="card shadow-xl p-6 bg-white">
                     <img className="w-100 overflow-hidden"
                         src={service_photo}
                         alt="serivce" />
-                    <h4 className="text-2xl mt-4">{service_name}</h4>
-                    <p className="">{description}</p>
-                    <div className="flex gap-4 items-center mt-4"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>
-                    <p className="flex gap-2 items-center font-bold text-xl mt-3">{price} Taka</p>
+                    <h4 className="text-2xl mt-4 text-black font-bold">{service_name}</h4>
+                    <p className="flex gap-2 items-center font-bold text-xl text-red-400">{price} Taka</p>
+                    <p className="text-black mb-4"><span className="font-bold">{service_area}</span></p>
+                    <p className="text-black">{description}</p>
+                    <div className="flex gap-4 items-center mt-4 text-black"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>
                 </div>
             </div>
 
