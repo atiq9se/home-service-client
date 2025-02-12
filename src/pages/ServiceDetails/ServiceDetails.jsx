@@ -24,7 +24,7 @@ const ServiceDetails = () => {
             </div>
 
             <div className="text-center mt-5">
-                <Link to={`/addBooking/${_id}`}><button className="btn bg-cyan-600 border-none text-white px-20 text-center hover:bg-teal-600">Book Now</button></Link>
+                <Link to={`/addBooking/${_id}`}><button className="btn bg-red-500 border-none text-white px-20 text-center hover:bg-red-800">Book Now</button></Link>
             </div>
         </div>
     );

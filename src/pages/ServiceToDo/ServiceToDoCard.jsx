@@ -50,7 +50,7 @@ const ServiceToDoCard = ({ service }) => {
             </div>
             <div className="flex flex-col gap-4 justify-center items-center">
 
-                <select onChange={(e) => handleStatusUpdate(e, _id)} defaultValue={service_status} className="select select-bordered w-full max-w-xs text-cyan-600">
+                <select onChange={(e) => handleStatusUpdate(e, _id)} defaultValue={service_status} className="select select-bordered w-full max-w-xs text-red-600">
                     <option>Pending</option>
                     <option>Working</option>
                     <option>Completed</option>
