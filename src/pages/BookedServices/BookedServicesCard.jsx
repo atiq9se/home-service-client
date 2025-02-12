@@ -22,7 +22,7 @@ const BookedServicesCard = ({service}) => {
                     <div className="mt-4"><p>Provider Name: {provider_name}</p><p>Provider Email: {provider_email}</p></div>
                 </div>
                 <div className="flex justify-center items-center">
-                    <div className="btn bg-cyan-600 border-none text-white px-20 text-center hover:bg-teal-600">Pending</div>
+                    <div className="btn bg-red-500 border-none text-white px-20 text-center hover:bg-red-800">Pending</div>
                 </div>
             </div>
     );

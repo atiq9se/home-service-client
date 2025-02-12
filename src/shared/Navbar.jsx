@@ -63,15 +63,15 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><NavLink to='/' className='font-bold text-lg'>Home</NavLink></li>
-                        <li><NavLink to='/about' className='font-bold text-lg'>About</NavLink></li>
-                        <li><NavLink to='/services' className='font-bold text-lg'>Services</NavLink></li>
-                        <li><NavLink to='/team' className='font-bold text-lg'>Our Team</NavLink></li>
+                        <li><NavLink to='/' className='font-bold text-lg text-white'>Home</NavLink></li>
+                        <li><NavLink to='/about' className='font-bold text-lg text-white'>About</NavLink></li>
+                        <li><NavLink to='/services' className='font-bold text-lg text-white'>Services</NavLink></li>
+                        <li><NavLink to='/team' className='font-bold text-lg text-white'>Our Team</NavLink></li>
                         {
                             user ? 
                             <li>
                             <details>
-                                <summary className='font-bold text-lg'>Dashboard</summary>
+                                <summary className='font-bold text-lg text-white'>Dashboard</summary>
                                 <ul className="p-2 w-60 z-40">
                                     <li><NavLink to='/addService' className="text-black font-bold text-lg">Add Service</NavLink></li>
                                     <li><NavLink to='/manageServices' className="text-black font-bold text-lg">Manage Service</NavLink></li>

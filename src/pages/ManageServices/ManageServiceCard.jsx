@@ -62,8 +62,8 @@ const ManageServiceCard = ({service, services, setServices}) => {
                     <div className="flex gap-4 items-center mt-4"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-center">
-                    <Link to={`/updateServices/${_id}`}><button className="btn bg-cyan-600 border-none text-white px-20 text-center hover:bg-teal-600">Update</button></Link>
-                    <button onClick={()=>handleDelete(_id)} className='btn bg-red-600 border-none text-white px-20 text-center hover:bg-red-800'>Delete</button>
+                    <Link to={`/updateServices/${_id}`}><button className="btn bg-red-300 border-none text-white px-20 text-center hover:bg-red-800">Update</button></Link>
+                    <button onClick={()=>handleDelete(_id)} className='btn bg-red-500 border-none text-white px-20 text-center hover:bg-red-800'>Delete</button>
                 </div>
             </div>
     );

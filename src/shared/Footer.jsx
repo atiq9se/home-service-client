@@ -10,7 +10,7 @@ const Footer = () => {
             <section class="lg:py-16 py-12 max-w-7xl lg:mx-auto mx-4">
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
                     <div class="text-center text-lg" data-aos="fade-up">
-                        <Link to='/' className="flex items-center justify-start"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold text-white'>HOME SERVICE</span></Link>
+                        <Link to='/' className="flex items-center justify-start"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold text-black'>HOME SERVICE</span></Link>
                     </div>
                     <div class="text-center text-lg" data-aos="fade-up">
                         <h3 class="font-bold pb-3 md:mt-0 mt-5 text-black text-2xl">Important Link</h3>
