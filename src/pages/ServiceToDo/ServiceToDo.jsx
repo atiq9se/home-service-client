@@ -24,7 +24,7 @@ const ServiceToDo = () => {
                         }
                     </div>
                 ) : (
-                    <p className="text-3xl text-red-800 md:py-24 py-10">No services booked yet. Check out our offerings to book your first service!</p>
+                    <p className="lg:text-3xl text-xl text-red-800 md:py-24 py-10">No services booked yet. Check out our offerings to book your first service!</p>
                 )}
             </div>
         </div>

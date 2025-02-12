@@ -40,19 +40,19 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow z-999">
-                            <li><NavLink to='/' className="text-white">Home</NavLink></li>
-                            <li><NavLink to='/about' className="text-white">About</NavLink></li>
-                            <li><NavLink to='/services' className="text-white">Services</NavLink></li>
-                            <li><NavLink to='/team' className="text-white">Our Team</NavLink></li>
+                            <li><NavLink to='/' className="text-black">Home</NavLink></li>
+                            <li><NavLink to='/about' className="text-black">About</NavLink></li>
+                            <li><NavLink to='/services' className="text-black">Services</NavLink></li>
+                            <li><NavLink to='/team' className="text-black">Our Team</NavLink></li>
                             {
                                 user ? 
                                 <li>
-                                <a className="text-white">Dashboard</a>
+                                <a className="text-black">Dashboard</a>
                                 <ul className="p-2 z-40">
-                                    <li><NavLink to='/addService' className="text-white">Add Service</NavLink></li>
-                                    <li><NavLink to='/manageServices' className="text-white">Manage Service</NavLink></li>
-                                    <li><NavLink to='/bookedServices' className="text-white">Booked-Services</NavLink></li>
-                                    <li><NavLink to='/serviceTodo' className="text-white">Service-To-Do</NavLink></li>
+                                    <li><NavLink to='/addService' className="text-black">Add Service</NavLink></li>
+                                    <li><NavLink to='/manageServices' className="text-black">Manage Service</NavLink></li>
+                                    <li><NavLink to='/bookedServices' className="text-black">Booked-Services</NavLink></li>
+                                    <li><NavLink to='/serviceTodo' className="text-black">Service-To-Do</NavLink></li>
                                 </ul>
                             </li>
                             : <></>
