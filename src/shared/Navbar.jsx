@@ -40,17 +40,19 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow z-999">
-                            <li><NavLink to='/' className="text-cyan-500">Home</NavLink></li>
-                            <li><NavLink to='/services' className="text-cyan-500">Services</NavLink></li>
+                            <li><NavLink to='/' className="text-white">Home</NavLink></li>
+                            <li><NavLink to='/about' className="text-white">About</NavLink></li>
+                            <li><NavLink to='/services' className="text-white">Services</NavLink></li>
+                            <li><NavLink to='/team' className="text-white">Our Team</NavLink></li>
                             {
                                 user ? 
                                 <li>
-                                <a className="text-cyan-500">Dashboard</a>
+                                <a className="text-white">Dashboard</a>
                                 <ul className="p-2 z-40">
-                                    <li><NavLink to='/addService' className="text-cyan-500">Add Service</NavLink></li>
-                                    <li><NavLink to='/manageServices' className="text-cyan-500">Manage Service</NavLink></li>
-                                    <li><NavLink to='/bookedServices' className="text-cyan-500">Booked-Services</NavLink></li>
-                                    <li><NavLink to='/serviceTodo' className="text-cyan-500">Service-To-Do</NavLink></li>
+                                    <li><NavLink to='/addService' className="text-white">Add Service</NavLink></li>
+                                    <li><NavLink to='/manageServices' className="text-white">Manage Service</NavLink></li>
+                                    <li><NavLink to='/bookedServices' className="text-white">Booked-Services</NavLink></li>
+                                    <li><NavLink to='/serviceTodo' className="text-white">Service-To-Do</NavLink></li>
                                 </ul>
                             </li>
                             : <></>
@@ -61,18 +63,20 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/services'>Services</NavLink></li>
+                        <li><NavLink to='/' className='font-bold text-lg'>Home</NavLink></li>
+                        <li><NavLink to='/about' className='font-bold text-lg'>About</NavLink></li>
+                        <li><NavLink to='/services' className='font-bold text-lg'>Services</NavLink></li>
+                        <li><NavLink to='/team' className='font-bold text-lg'>Our Team</NavLink></li>
                         {
                             user ? 
                             <li>
                             <details>
-                                <summary>Dashboard</summary>
-                                <ul className="p-2 w-40 z-40">
-                                    <li><NavLink to='/addService' className="text-cyan-500">Add Service</NavLink></li>
-                                    <li><NavLink to='/manageServices' className="text-cyan-500">Manage Service</NavLink></li>
-                                    <li><NavLink to='/bookedServices' className="text-cyan-500">Booked-Services</NavLink></li>
-                                    <li><NavLink to='/serviceTodo' className="text-cyan-500">Service-To-Do</NavLink></li>
+                                <summary className='font-bold text-lg'>Dashboard</summary>
+                                <ul className="p-2 w-60 z-40">
+                                    <li><NavLink to='/addService' className="text-black font-bold text-lg">Add Service</NavLink></li>
+                                    <li><NavLink to='/manageServices' className="text-black font-bold text-lg">Manage Service</NavLink></li>
+                                    <li><NavLink to='/bookedServices' className="text-black font-bold text-lg">Booked-Services</NavLink></li>
+                                    <li><NavLink to='/serviceTodo' className="text-black font-bold text-lg">Service-To-Do</NavLink></li>
                                 </ul>
                             </details>
                         </li>
@@ -86,9 +90,9 @@ const Navbar = () => {
                             <div className="tooltip tooltip-left" data-tip={user.displayName}>
                                 <div className="w-12 h-12 rounded-full"><img src={user.photoURL} alt="" className="rounded-full w-full h-full" /></div>
                             </div>
-                            <a onClick={handleSignOut} className="btn bg-red-500 text-white hover:bg-red-900 border-none">Logout</a>
+                            <a onClick={handleSignOut} className="btn text-lg bg-red-500 text-white hover:bg-red-900 border-none">Logout</a>
                         </div>
-                            : <><NavLink to="/login" className="btn bg-cyan-600 border-none hover:bg-cyan-800 text-white mr-2">Log-in</NavLink>
+                            : <><NavLink to="/login" className="btn text-lg bg-red-500 border-none hover:bg-red-900 text-white mr-2">Log-in</NavLink>
                             </>
                     }
                 </div>

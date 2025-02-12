@@ -19,7 +19,7 @@ const Home = () => {
             {
                 services.map(service=><ServiceCard key={service._id} service={service}></ServiceCard>)
             }
-            <div className="text-center mt-5"> <Link to='/services' className="btn bg-cyan-600 border-none text-white px-20 text-center hover:bg-teal-600">See all services</Link></div>
+            <div className="text-center mt-5"> <Link to='/services' className="btn bg-red-500 border-none font-lg text-white px-20 text-center hover:bg-red-800">See all services</Link></div>
             </div>
             <About></About>
 

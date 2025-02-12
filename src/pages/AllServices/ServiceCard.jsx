@@ -30,8 +30,7 @@ const ServiceCard = ({ service }) => {
                     <div className="flex gap-4 items-center mt-4"><img src={provider_image} alt="" className="w-12 rounded-full" /><p>{provider_name}</p></div>
                 </div>
                 <div className="card-actions justify-center items-center">
-                    <Link to={`/services/${_id}`}><motion.button animate={{y:[20, 40, 0]}}
-                    transition={{duration:5}} className="btn bg-cyan-600 border-none text-white px-12 text-center hover:bg-teal-600 mb-4">View Details</motion.button></Link>
+                    <Link to={`/services/${_id}`}><button className="btn bg-red-500 border-none text-white px-12 text-center hover:bg-red-800 mb-4">View Details</button></Link>
                 </div>
             </div>
         </div>

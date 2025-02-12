@@ -13,26 +13,26 @@ const Footer = () => {
                         <Link to='/' className="flex items-center justify-start"><img src={logo_icon} alt="" className='w-16' /> <span className='text-2xl font-bold text-white'>HOME SERVICE</span></Link>
                     </div>
                     <div class="text-center text-lg" data-aos="fade-up">
-                        <h3 class="font-bold pb-3 md:mt-0 mt-5 text-cyan-700 text-2xl">Important Link</h3>
-                        <Link to='/register' className="block text-cyan-500 text-lg hover:text-red-700">Register</Link>
-                        <Link to='/login' className="block text-cyan-500 text-lg hover:text-red-700">Login</Link>
-                        <Link to='/services' className="block text-cyan-500 text-lg hover:text-red-700">All Services</Link>
+                        <h3 class="font-bold pb-3 md:mt-0 mt-5 text-black text-2xl">Important Link</h3>
+                        <Link to='/register' className="block text-black text-lg hover:text-red-700">Register</Link>
+                        <Link to='/login' className="block text-black text-lg hover:text-red-700">Login</Link>
+                        <Link to='/services' className="block text-black text-lg hover:text-red-700">All Services</Link>
                     </div>
                     <div className='flex flex-col items-center gap-4'>
-                        <h3 class="font-bold pb-3 md:mt-0 mt-5 text-cyan-700 text-2xl ">Social Media Link</h3>
-                        <Link to='https://www.facebook.com/' target='_blank' className="block text-cyan-500 text-lg hover:text-red-700"><FaFacebookF /></Link>
-                        <Link to='https://bd.linkedin.com/' target='_blank' className="block text-cyan-500 text-lg hover:text-red-700"><FaLinkedinIn /></Link>
+                        <h3 class="font-bold pb-3 md:mt-0 mt-5 text-black text-2xl ">Social Media Link</h3>
+                        <Link to='https://www.facebook.com/' target='_blank' className="block text-black text-lg hover:text-red-700"><FaFacebookF /></Link>
+                        <Link to='https://bd.linkedin.com/' target='_blank' className="block text-black text-lg hover:text-red-700"><FaLinkedinIn /></Link>
                     </div>
                     <div class="text-center text-lg" data-aos="fade-up">
-                        <h3 class="font-bold pb-3 md:mt-0 mt-5 text-cyan-700 text-2xl">Contact us</h3>
-                        <p className="text-cyan-500">Address: Kaderbad housing mohammadpur, dhaka</p>
-                        <p className="text-cyan-500">Phone: 01732090820</p>
-                        <p className="text-cyan-500">Email: atiq9se@gmail.com</p>
+                        <h3 class="font-bold pb-3 md:mt-0 mt-5 text-black text-2xl">Contact us</h3>
+                        <p className="text-black">Address: Kaderbad housing mohammadpur, dhaka</p>
+                        <p className="text-black">Phone: 01732090820</p>
+                        <p className="text-black">Email: atiq9se@gmail.com</p>
                     </div>
                 </div>
             </section>
             <div className="text-center border-t border-t-gray-400 bg-gray-300">
-                <p className="text-cyan-500 py-2">All right reserved@ HOME SERVICE</p>
+                <p className="py-2">All right reserved@ HOME SERVICE</p>
             </div>
         </div>
     );
